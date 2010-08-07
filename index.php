@@ -14,6 +14,7 @@
 				
 				
 				<div class="entry">
+				  <?php { if ( function_exists('add_theme_support')) the_post_thumbnail( 'post-thumbnail' ); } ?>
 					<?php the_content('&raquo; Read the rest of this entry &laquo;'); ?>
 					<?php wp_link_pages(array('before' => '<p>Page: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 				
