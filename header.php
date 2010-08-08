@@ -49,8 +49,12 @@
     <span class="header_image"></span>
     <h1 class="masthead"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
     <p class="description"><?php bloginfo('description'); ?></p>
-  <ul>
-    <?php wp_list_pages('title_li=&depth=1'); ?>
-    <li><a href="<?php bloginfo('atom_url'); ?>">Feed</a></li>
-  </ul>
+  <?php if ( has_nav_menu( 'main-menu' )) : ?>
+    <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' )); ?>
+  <?php else: ?>
+    <ul>
+      <?php wp_list_pages('title_li=&depth=1'); ?>
+      <li><a href="<?php bloginfo('atom_url'); ?>">Feed</a></li>
+    </ul>
+  <?php endif; ?>
 </div>

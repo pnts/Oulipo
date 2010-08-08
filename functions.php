@@ -30,6 +30,14 @@ if ( function_exists( 'add_theme_support' )) {
     </style><?php }
   
   add_custom_image_header('oulipo_header_style','oulipo_admin_header_style');
+  
+  add_action( 'init', 'register_oulipo_menus' );
+  function register_oulipo_menus() {
+    register_nav_menus(
+      array(
+        'main-menu' => __( 'Main Navigation Menu' )
+        ));
+  }
 }
 
 if ( function_exists('register_sidebar') )
