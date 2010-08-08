@@ -2,7 +2,7 @@
 Theme Name: Oulipo
 Theme URI: http://andreamignolo.com/oulipo
 Description: A grid-based, black and white WordPress theme
-Version: 1.0.6
+Version: 1.0.7
 Author: A. Mignolo 
 Author URI: http://andreamignolo.com
 Tags: white, three-columns, fixed-width, threaded-comments, sticky-post
@@ -45,9 +45,13 @@ blockquote, q {
 	margin: 0 auto;
 }
 
+#header {
+  display: block;
+}
+
 #main_nav {
 	width: 10em;
-	margin: 9em 0 0 0;
+	margin: 2.1em 0 0 0;
 	float: left;
 	display: inline;
 	position: fixed;
@@ -117,6 +121,9 @@ ul#categories li, ul#archives li {
 	padding: 0;
 }
 
+.description {
+  margin-top: -.2em;
+}
 
 .header {
 	margin: 0 0 1.5em 0;
@@ -186,91 +193,95 @@ h1, h2, h3, h4, h5, #main_nav ul, .date, .description, .ctitle, .fin,
 	font-family: "Hoefler Text", "Constantia", Georgia, "Times New Roman", Times, serif;
 }
 
-h1, .date, .description {
-	font-variant: small-caps;
+h1, .date  {
+  font-variant: small-caps;
+}
+
+.description {
+  font-style: italic;
 }
 
 h1 {
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 h2 {
-	font-size: 1.7em;
-	margin-bottom: 1em;
+  font-size: 1.7em;
+  margin-bottom: 1em;
 }
 
 h3 {
-	font-size: 1.7em;
-	margin: 1em 0 0 0;
-	border-bottom: 1px solid #eee;
+  font-size: 1.7em;
+  margin: 1em 0 0 0;
+  border-bottom: 1px solid #eee;
 }
 
 #supplementary h3, h2.widgettitle {
-	margin: 2em 0 -.7em 0;
-	font-size: 1.15em;
-	font-variant: small-caps;
-	border-bottom: none;
+  margin: 2em 0 -.7em 0;
+  font-size: 1.15em;
+  font-variant: small-caps;
+  border-bottom: none;
 }
 
 .widget li {
-	border-bottom: 0;
+  border-bottom: 0;
 }
 
 h4 {
-	font-size: 1.4em;
-	margin: 2em 0 0 0;
-	font-variant: small-caps;
+  font-size: 1.4em;
+  margin: 2em 0 0 0;
+  font-variant: small-caps;
 }
 
 h5 {
-	font-size: 1.3em;
-	margin: .8em 0;
+  font-size: 1.3em;
+  margin: .8em 0;
 }
 
 #main_nav ul {
-	text-transform: uppercase;
-	font-size: .75em;
-	list-style-type: none;
+  text-transform: uppercase;
+  font-size: .75em;
+  list-style-type: none;
 }
 
 .entry {
-	font-size: .75em;
-	line-height: 1.9em;
+  font-size: .75em;
+  line-height: 1.9em;
 }
 
 #entry_content p {
-	margin: .7em 0 2em 0;
+  margin: .7em 0 2em 0;
 }
 
 .description, .date  {
-	font-size: .8em;
-	color: #aaa;
+  font-size: .8em;
+  color: #aaa;
 }
 
 .commentcount {
-	color: #aaa ;
+  color: #aaa ;
 }
 
 #entry_content .date {
-	margin: -2em 0 2em 0;
+  margin: -2em 0 1em 0;
 }
 
 .entry > p:first-child:first-letter {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 .entry > p:first-child:first-line {
-	font-variant: small-caps;
-	font-size: 1.3em;
+  font-variant: small-caps;
+  font-size: 1.3em;
 }
 
 .entry ul, .entry ol {
-	margin: 1.5em 0 0 0;
-	padding-left: 2.2em;
+  margin: 1.5em 0 0 0;
+  padding-left: 2.2em;
 }
 
 #search {
-	margin-top: 1.5em;
+  margin-top: 1.5em;
 	border-bottom: 1px dotted #999;
 }
 
@@ -771,6 +782,13 @@ img { -ms-interpolation-mode:bicubic; }
 	margin-top: 15px;
 	padding-bottom: 15px;
 	border-bottom: 1px dotted #CCC;
+}
+
+.entry img.attachment-post-thumbnail {
+  border: 0;
+  float: left;
+  margin: 7px 10px 0 0;
+  padding: 0;
 }
 
 
