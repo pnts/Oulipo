@@ -11,9 +11,6 @@
       <div class="entry">
         <?php { if ( function_exists('add_theme_support')) the_post_thumbnail( 'post-thumbnail' ); } ?>
         <?php the_content('&raquo; Read the rest of this entry &laquo;'); ?>
-        <div class="pagination">
-          <?php wp_link_pages(array('before' => '<p><span>Page</span> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-        </div>
       </div>
         <?php if(is_home()) { if ( function_exists('wp_list_comments') ) { ?></div><!-- close post_class --><?php }} ?>
   <?php endwhile; ?>
