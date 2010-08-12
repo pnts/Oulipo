@@ -176,13 +176,23 @@ dd.gallery-caption {
 	padding-top: 0;
 }
 
-/* =Typography
+/* =Sticky
 ------------------------------------------------------------------*/
 
 #entry_content .sticky {
-	border: 1px dotted #CCC;
-	padding: 15px;
-	margin-bottom: 20px;
+  padding: 15px 15px 0 15px;
+  background: #EEE;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+#entry_content .sticky h2 {
+  border-bottom: 1px dotted #CCC;
+}
+
+#entry_content .sticky .more-link {
+  padding-bottom: 10px;
 }
 
 
@@ -294,7 +304,7 @@ h3#comments {
 }
 
 #entry_content .date {
-  margin: -1.8em 0 .7em 0;
+  margin: -1.8em 0 .9em 0;
 }
 
 .entry > p:first-child:first-letter {
