@@ -5,7 +5,7 @@ if ( function_exists( 'add_theme_support' )) {
   add_custom_background();
   add_theme_support( 'automatic-feed-links' );
   
-  define('HEADER_TEXTCOLOR', 'FF9900');
+  define('HEADER_TEXTCOLOR', '000000');
   define('HEADER_IMAGE', '%s/images/default_header.jpg'); // %s is the template dir uri
   define('HEADER_IMAGE_WIDTH', 160); // use width and height appropriate for your theme
   define('HEADER_IMAGE_HEIGHT', 120);

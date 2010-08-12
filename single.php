@@ -11,9 +11,11 @@
       <div class="entry">
         <?php { if ( function_exists('add_theme_support')) the_post_thumbnail( 'post-thumbnail' ); } ?>
         <?php the_content('&raquo; Read the rest of this entry &laquo;'); ?>
-        <?php wp_link_pages(array('before' => '<p>Page: ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+        <div class="pagination">
+          <?php wp_link_pages(array('before' => '<p><span>Page</span>', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+        </div>
 
-        <p class="tags"><?php the_tags('<strong>Tagged:</strong> ', ', ', ''); ?></p>
+        <p class="tags"><?php the_tags('<span>Tagged </span> ', ', ', ''); ?></p>
         <?php comments_template(); ?>
       </div>
   <?php endwhile; ?>

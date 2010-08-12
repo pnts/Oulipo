@@ -35,6 +35,7 @@
   <![endif]-->
 
   <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>
+  <?php add_theme_support('automatic-feed-links'); ?> 
   <?php wp_head(); ?>
 </head>
 

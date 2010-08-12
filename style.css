@@ -37,6 +37,13 @@ blockquote, q {
 	quotes: "" "";
 }
 
+input::-moz-focus-inner /*Remove button padding in FF*/
+{ 
+    border: 0;
+    padding: 0;
+}
+
+
 /* =Layout
 ------------------------------------------------------------------*/
 
@@ -59,7 +66,7 @@ blockquote, q {
 
 #content {
 	width: 50em;
-	margin: 2em 0 0 0;
+	margin: 1.7em 0 0 0;
 	float: right;
 	display: inline;
 	min-height: 30em;
@@ -96,7 +103,6 @@ blockquote, q {
 	margin: 2.5em 0 0 0;
 }
 
-
 .meta ul {
 	margin: 1em 0 0 0;
 }
@@ -130,7 +136,7 @@ ul#categories li, ul#archives li {
 }
 
 .entry {
-	margin: 0 0 4em 0;
+	margin: 0 0 1em 0;
 }
 
 .alignleft {
@@ -183,21 +189,22 @@ dd.gallery-caption {
 /* =Typography
 ------------------------------------------------------------------*/
 
-body, .delicious-desc {
+body, .delicious-desc, #commentform textarea {
 	background: #FFF;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, sans-serif;
 }
 
 h1, h2, h3, h4, h5, #main_nav ul, .date, .description, .ctitle, .fin,
- 	.entry > p:first-child:first-line, .error, .navigation, .more-link, .comment-author, .comment-meta {
+ 	.entry > p:first-child:first-line, .error, .navigation, .more-link, .comment-author, .comment-meta,
+ 	.pagination p span, #entry_content p.tags span {
 	font-family: "Hoefler Text", "Constantia", Georgia, "Times New Roman", Times, serif;
 }
 
-h1, .date  {
+h1 {
   font-variant: small-caps;
 }
 
-.description {
+.description, .date {
   font-style: italic;
 }
 
@@ -208,12 +215,12 @@ h1 {
 h2 {
   font-size: 1.7em;
   margin-bottom: 1em;
+  padding-bottom: .13em;
 }
 
 h3 {
   font-size: 1.7em;
   margin: 1em 0 0 0;
-  border-bottom: 1px solid #eee;
 }
 
 #supplementary h3, h2.widgettitle {
@@ -253,6 +260,30 @@ h5 {
   margin: .7em 0 2em 0;
 }
 
+#entry_content p.tags {
+  margin: .3em 0 0 0;
+}
+
+h3#comments {
+  margin-top: 2em;
+}
+
+#commentform p {
+  margin: .7em 0;
+}
+
+#commentform textarea {
+  background: #EEE;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 0;
+  padding: 4px;
+  width: 43.5em;
+  font-size: .9em;
+  color: #999;
+}
+
 .description, .date  {
   font-size: .8em;
   color: #aaa;
@@ -263,11 +294,11 @@ h5 {
 }
 
 #entry_content .date {
-  margin: -2em 0 1em 0;
+  margin: -1.8em 0 .7em 0;
 }
 
 .entry > p:first-child:first-letter {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .entry > p:first-child:first-line {
@@ -294,13 +325,47 @@ h5 {
 #searchform {
 	margin-top: -1em;
 	text-align: right;
-	padding: 0 0 1em 0;
+	padding: 0 0 .6em 0;
 	}
+	
+#searchform input.search {
+  width: 12.4em;
+  text-transform: none;
+}
+
+#searchform input#searchsubmit {
+  padding: 2px;
+  background: url(images/search.png) no-repeat center #EEE;
+  text-indent: -9999px;
+  width: 25px;
+  height: 20px;
+}
+
+#searchform input#searchsubmit:hover {
+  cursor: pointer;
+  background: url(images/search.png) no-repeat center #3399FF;
+}
 
 input {
-	border: 1px solid #666;
+	background: #EEE;
+	border: 0;
+	padding: 3px;
+	border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  color: #999;
 	}
+	
+input#submit {
+  padding: 3px 5px;
+  background: #3399FF;
+  color: #FFF;
+}
 
+input#submit:hover {
+  cursor: pointer;
+}
+	
 blockquote {
 	width: 90%;
 	margin: 2em auto;
@@ -311,9 +376,8 @@ blockquote {
 
 .entry img {
 	margin: 1.5em auto 0 auto;
-	padding: 3px;
-	border: 1px solid #000;
 	display: block;
+	border: 0;
 }
 
 .entry img.wp-smiley {
@@ -404,7 +468,6 @@ li.footnote {
 	border-right: 1px dotted #000;
 }
 
-
 #entry_content .fin {
 	text-align: center;
 	font-size: 1.3em;
@@ -437,6 +500,30 @@ code {
 	padding-right: 1em;
 }
 
+#entry_content .pagination p {
+  margin: -1em 0 2em 0;
+}
+
+#entry_content .pagination p span,
+#entry_content p.tags span {
+  color: #AAA;
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+#entry_content p.tags span {
+  padding-right: 3px;
+}
+
+#entry_content .pagination a {
+  font-weight: normal;
+  background: #EEE;
+  padding: 2px 3px;
+  margin: 0 1px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+
 
 /* =Link Styles
 ------------------------------------------------------------------*/
@@ -445,11 +532,17 @@ a {
 	color: #666;
 }
 
+a:hover, a:hover .commentcount,
+ul.commentlist a:hover, .entry a:hover {
+  color: #3399FF !important;
+}
+
 #main_nav h1.masthead a {
-	color: #FF9900;
+	color: #000;
 }
 #main_nav h1.masthead a:hover {
 	border-right: none;
+	color: #3399FF;
 }
 
 h2 {
@@ -461,8 +554,7 @@ h2 a, #main_nav a {
 }
 
 h2 a:hover {
-	color: #CCC;
-	border-bottom: 1px solid #FF9900;
+	color: #3399FF;
 }
 
 h3 {
@@ -477,12 +569,6 @@ img a, img a:hover {
 	font-weight: bold;
 	font-size: 12px;
 	color: #000;
-	border-bottom: 1px solid #EEE;
-}
-
-.entry a:hover, .navigation a:hover {
-	color: #FF9900;
-	border-bottom: 1px dotted #333;
 }
 
 .entry sup {
@@ -517,15 +603,12 @@ img a, img a:hover {
 #main_nav a:hover, .current_page_item, .current {
 	width: 100%;
 	border-right: 3px solid #EEE;
+	color: #3399FF;
 }
 
-#footer a {
-	border-bottom: 1px solid #eee;
-}
 
 #footer a:hover {
 	color: #3399FF;
-	border-bottom: 1px solid #FF9900;
 }
 
 #supplementary a {
@@ -533,7 +616,7 @@ img a, img a:hover {
 }
 
 #supplementary a:hover {
-	color: #3399FF;
+	color: #3399FF !important;
 
 }
 
@@ -548,13 +631,13 @@ img a, img a:hover {
 }
 
 .entry a.more-link {
-	color: #666;
-	font-variant: small-caps;
-	font-size: 1.2em;
+	color: #AAA;
+	font-style: italic;
+	font-size: 1.1em;
 	border: 0;
 	text-align: center;
 	display: block;
-	margin: 1em auto;
+	margin: 1em auto 0 auto;
 	text-transform: none;
 	font-weight: normal;
 	clear: both;
@@ -659,15 +742,11 @@ ul.archive_block {
 	margin: 1em 0 0 0;
 }
 
-
-
-
 /* =Threaded Styles
 ------------------------------------------------------------------*/
 
 ul.commentlist cite {
 	font-style: normal;
-	font-weight: bold;
 }
 
 ul.commentlist span.says {
@@ -675,7 +754,14 @@ ul.commentlist span.says {
 }
 
 ul.commentlist .comment-author, ul.commentlist .comment-meta {
-	font-variant: small-caps;
+	font-style: italic;
+	color: #aaa;
+}
+
+.comment-author a, .comment-meta a {
+  color: #aaa;
+  font-weight: normal;
+  font-size: 1.1em;
 }
 
 ul.commentlist .comment-meta {
@@ -687,7 +773,7 @@ ul.children {
 }
 
 h3#comments {
-	margin-bottom: 1em;
+	margin-bottom: .7em;
 	clear: both;
 }
 
@@ -715,7 +801,6 @@ ul.commentlist, ul.commentmeta {
 	padding: 0;
 	list-style-type: none;
 }
-
 
 ul.commentmeta {
 	margin-top: 2em;
@@ -746,6 +831,10 @@ img.avatar {
 	font-variant: small-caps;
 }
 
+.reply {
+  margin-top: -1em;
+}
+
 /* =Better image scaling in IE
 ------------------------------------------------------------------*/
 
@@ -770,7 +859,7 @@ img { -ms-interpolation-mode:bicubic; }
 }
 
 #entry_content .entry p.wp-caption-text {
-	color: #CCC;
+	color: #999;
 	text-align: center;
 	font-size: 11px;
 	margin-top: 0;
