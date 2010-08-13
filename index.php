@@ -9,7 +9,7 @@
       <p class="date"><?php the_time('F jS, Y') ?> <?php comments_popup_link('<span class="commentcount">&sect; 0</span>', '<span class="commentcount">&sect; 1</span>', '<span class="commentcount">&sect; %</span>'); ?></p>
       
       <?php if(is_search()) : ?>
-        <div class="entry">
+        <div class="entry search-results">
           <?php the_excerpt(); ?>
         </div>
       <?php else : ?>

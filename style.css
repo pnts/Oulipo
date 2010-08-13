@@ -368,6 +368,10 @@ h3#comments {
   background: url(images/search.png) no-repeat center #3399FF;
 }
 
+.entry.search-results {
+  margin-bottom: 3em;
+}
+
 input {
 	background: #EEE;
 	border: 0;
