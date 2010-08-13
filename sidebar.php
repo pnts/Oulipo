@@ -1,6 +1,6 @@
 <div id="supplementary">
 <div class="meta">
-  <?php if (is_home() || is_page() || is_single()) {?>
+  <?php if (is_home() || is_page()) {?>
   <ul>
     <?php if ( !function_exists('dynamic_sidebar')
       || !dynamic_sidebar() ) : ?>
