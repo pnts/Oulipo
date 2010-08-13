@@ -8,11 +8,17 @@
       <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
       <p class="date"><?php the_time('F jS, Y') ?> <?php comments_popup_link('<span class="commentcount">&sect; 0</span>', '<span class="commentcount">&sect; 1</span>', '<span class="commentcount">&sect; %</span>'); ?></p>
       
-      <div class="entry">
-        <?php { if ( function_exists('add_theme_support')) the_post_thumbnail( 'post-thumbnail' ); } ?>
-        <?php the_content('&raquo; Read the rest of this entry &laquo;'); ?>
-      </div>
+      <?php if(is_search()) : ?>
+        <div class="entry">
+          <?php the_excerpt(); ?>
+        </div>
+      <?php else : ?>
+        <div class="entry">
+          <?php { if ( function_exists('add_theme_support')) the_post_thumbnail( 'post-thumbnail' ); } ?>
+          <?php the_content('&raquo; Read the rest of this entry &laquo;'); ?>
+        </div>
         <?php if(is_home()) { if ( function_exists('wp_list_comments') ) { ?></div><!-- close post_class --><?php }} ?>
+      <?php endif; ?>
   <?php endwhile; ?>
 
   <div class="navigation">
