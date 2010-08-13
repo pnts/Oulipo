@@ -180,7 +180,7 @@ dd.gallery-caption {
 ------------------------------------------------------------------*/
 
 #entry_content .sticky {
-  padding: 15px 15px 0 15px;
+  padding: 15px 15px 10px 15px;
   background: #EEE;
   border-radius: 2px;
   -moz-border-radius: 2px;
