@@ -79,6 +79,10 @@ input::-moz-focus-inner /*Remove button padding in FF*/
 	display: inline;
 }
 
+.post {
+  margin-bottom: 1.5em;
+}
+
 #supplementary {
 	width: 11em;
 	margin: 0 0 0 0;
@@ -185,6 +189,7 @@ dd.gallery-caption {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  margin-bottom: 30px;
 }
 
 #entry_content .sticky .entry {
@@ -194,6 +199,12 @@ dd.gallery-caption {
 #entry_content .sticky h2 {
   border-bottom: 1px dotted #CCC;
 }
+
+#entry_content p:last-child {
+  margin-bottom: 0;
+}
+
+
 
 
 
@@ -661,7 +672,7 @@ img a, img a:hover {
 	border: 0;
 	text-align: center;
 	display: block;
-	margin: 1em auto 0 auto;
+	margin: -1em auto 0 auto;
 	text-transform: none;
 	font-weight: normal;
 	clear: both;
