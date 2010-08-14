@@ -4,6 +4,7 @@ if ( function_exists( 'add_theme_support' )) {
   set_post_thumbnail_size( 59, 59, true );
   add_custom_background();
   add_theme_support( 'automatic-feed-links' );
+
   
   define('HEADER_TEXTCOLOR', '000000');
   define('HEADER_IMAGE', '%s/images/default_header.jpg'); // %s is the template dir uri

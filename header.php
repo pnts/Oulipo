@@ -34,8 +34,7 @@
     <link href="<?php bloginfo('template_directory'); ?>/ie6.css" type="text/css" rel="stylesheet" media="screen" />
   <![endif]-->
 
-  <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?>
-  <?php add_theme_support('automatic-feed-links'); ?> 
+  <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?> 
   <?php wp_head(); ?>
 </head>
 
