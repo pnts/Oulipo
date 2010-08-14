@@ -366,10 +366,6 @@ h3#comments {
   height: 20px;
 }
 
-#searchform input#searchsubmit:hover {
-  cursor: pointer;
-  background: url(images/search.png) no-repeat center #3399FF;
-}
 
 .entry.search-results {
   margin-bottom: 3em;
@@ -387,7 +383,6 @@ input {
 	
 input#submit {
   padding: 3px 5px;
-  background: #3399FF;
   color: #FFF;
 }
 
@@ -555,21 +550,39 @@ code {
 /* =Link Styles
 ------------------------------------------------------------------*/
 
+#searchform input#searchsubmit:hover, input#submit {
+  cursor: pointer;
+}
+
+input#searchsubmit {
+  background: url(images/search.png) no-repeat center #3399FF;
+}
+
+.navigation a:hover, input#submit {
+  background: #3399FF;
+  color: #FFF !important;
+}
+
 a {
 	color: #666;
 }
 
-a:hover, a:hover .commentcount,
-ul.commentlist a:hover, .entry a:hover {
+a:hover {
+  color: #3399FF !important;
+}
+
+.entry sup a,
+#main_nav .current_page_item a
+{
   color: #3399FF !important;
 }
 
 #main_nav h1.masthead a {
 	color: #000;
 }
+
 #main_nav h1.masthead a:hover {
 	border-right: none;
-	color: #3399FF;
 }
 
 h2 {
@@ -578,10 +591,6 @@ h2 {
 
 h2 a, #main_nav a {
 	color: #000;
-}
-
-h2 a:hover {
-	color: #3399FF;
 }
 
 h3 {
@@ -608,11 +617,6 @@ img a, img a:hover {
   -moz-border-radius: 2px;
 }
 
-.navigation a:hover {
-  background: #3399FF;
-  color: #FFF !important;
-}
-
 .entry sup {
 	font-size: 11px;
 	color: #aaa;
@@ -620,7 +624,6 @@ img a, img a:hover {
 
 .entry sup a {
 	border: 0;
-	color: #3399FF;
 	margin: 0;
 	font-weight: normal;
 	font-size: 10px;
@@ -645,31 +648,24 @@ img a, img a:hover {
 #main_nav a:hover, .current_page_item, .current {
 	width: 100%;
 	border-right: 3px solid #EEE;
-	color: #3399FF;
-}
-
-
-#footer a:hover {
-	color: #3399FF;
 }
 
 #supplementary a {
 	color: #888;
 }
 
-#supplementary a:hover {
-	color: #3399FF !important;
-
-}
-
 #supplementary .offsite a, .offsite a img {
 	border: 0;
 }
 
-.entry h3 a, .entry h3 a:hover {
+.entry h3 a {
 	color: #333;
 	text-decoration: none;
 	border: 0;
+}
+
+.entry h3 a:hover {
+  text-decoration: none;
 }
 
 .entry a.more-link {
