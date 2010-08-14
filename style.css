@@ -306,6 +306,7 @@ h3#comments {
   width: 43.5em;
   font-size: .9em;
   color: #999;
+  overflow: auto;
 }
 
 .description, .date  {
@@ -928,11 +929,12 @@ img { -ms-interpolation-mode:bicubic; }
   position: relative;
 }
 
-#main_nav ul.menu li:hover ul.sub-menu {
+#main_nav ul.menu li:hover ul.sub-menu,
+#main_nav ul.menu li:hover ul.children {
   display: block;
 }
 
-#main_nav ul.sub-menu {
+#main_nav ul.sub-menu, #main_nav ul.children {
   margin-top: 0;
   position: absolute;
   top: -1px;
@@ -942,18 +944,17 @@ img { -ms-interpolation-mode:bicubic; }
   display: none;
 }
 
-#main_nav ul.sub-menu li {
+#main_nav ul.sub-menu li, #main_nav ul.children li {
   width: 100%;
   padding: .5em .3em .1em .5em;
   border-bottom: 1px solid #FFF;
   background: #EEE;
 }
 
-#main_nav ul.sub-menu li a {
+#main_nav ul.sub-menu li a, #main_nav ul.children li a {
   padding: 0;
   line-height: 1.55em
 }
-
 
 #main_nav ul.sub-menu a:hover, ul.sub-menu .current_page_item, ul.sub-menu .current {
   border-right: 0;

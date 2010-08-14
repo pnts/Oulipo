@@ -1,4 +1,5 @@
-p.description, p.date, .entry a.more-link {
+p.description, p.date, .entry a.more-link,
+#entry_content p.tags span, .comment-meta {
 	font-family: "Palatino Linotype";
 }
 

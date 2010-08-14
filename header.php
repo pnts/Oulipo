@@ -53,8 +53,8 @@
   <?php if ( has_nav_menu( 'main-menu' )) : ?>
     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' )); ?>
   <?php else: ?>
-    <ul>
-      <?php wp_list_pages('title_li=&depth=1'); ?>
+    <ul class="menu">
+      <?php wp_list_pages('title_li=&depth=2'); ?>
       <li><a href="<?php bloginfo('atom_url'); ?>">Feed</a></li>
     </ul>
   <?php endif; ?>
