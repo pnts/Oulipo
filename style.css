@@ -341,7 +341,7 @@ h3#comments {
 	border-bottom: 1px dotted #999;
 }
 
-.search {
+#wrapper .search {
 	text-transform: uppercase;
 	font-size: .7em;
 	padding-right: .5em;
