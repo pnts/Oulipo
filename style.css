@@ -812,8 +812,10 @@ ul.commentlist .comment-meta {
 	margin-top: -.5em;
 }
 
-ul.children {
+.commentlist ul.children {
 	list-style-type: none;
+	overflow: hidden;
+	margin-top: 1.5em;
 }
 
 h3#comments {
@@ -832,11 +834,6 @@ ul.commentlist .comment.bypostauthor .vcard img {
 ul.commentlist .comment .comment-author.vcard img{
 	border: 1px solid #000;
 }
-
-.depth-2 {
-	margin-top: 2em;
-}
-
 
 /* =Comment Styles
 ------------------------------------------------------------------*/
