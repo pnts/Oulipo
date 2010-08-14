@@ -26,7 +26,7 @@
   <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?php bloginfo('url'); ?>/xmlrpc.php?rsd" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-  <!--[if lte IE 7]>
+  <!--[if IE]>
     <link href="<?php bloginfo('template_directory'); ?>/ie.css" type="text/css" rel="stylesheet" media="screen" />
   <![endif]-->
   

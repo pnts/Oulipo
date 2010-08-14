@@ -1,3 +1,15 @@
+p.description, p.date, .entry a.more-link {
+	font-family: "Palatino Linotype";
+}
+
+#entry_content .sticky .entry {
+	padding-bottom: 1px;
+}
+
+.entry a.more-link {
+	margin-top: -.5em;
+}
+
 .commenttext {
 	margin-top: 1.5em;
 }

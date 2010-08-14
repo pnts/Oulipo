@@ -212,14 +212,14 @@ dd.gallery-caption {
 ------------------------------------------------------------------*/
 
 body, .delicious-desc, #commentform textarea {
-	background: #FFF;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, sans-serif;
+font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, sans-serif;	
+background: #FFF;
 }
 
 h1, h2, h3, h4, h5, #main_nav ul, .date, .description, .ctitle, .fin,
  	.entry > p:first-child:first-line, .error, .more-link, .comment-author, .comment-meta,
  	.pagination p span, #entry_content p.tags span {
-	font-family: "Hoefler Text", "Constantia", Georgia, "Times New Roman", Times, serif;
+	font-family: "Hoefler Text", "Cambria", Georgia, "Times New Roman", Times, serif;
 }
 
 h1 {
