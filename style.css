@@ -186,9 +186,9 @@ dd.gallery-caption {
 #entry_content .sticky {
   padding: 15px 15px 0 15px;
   background: #EEE;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   margin-bottom: 30px;
 }
 
@@ -298,9 +298,9 @@ h3#comments {
 
 #commentform textarea {
   background: #EEE;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border: 0;
   padding: 4px;
   width: 43.5em;
@@ -375,9 +375,9 @@ input {
 	background: #EEE;
 	border: 0;
 	padding: 3px;
-	border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+	border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   color: #999;
 	}
 	
@@ -542,9 +542,9 @@ code {
   background: #EEE;
   padding: 2px 3px;
   margin: 0 1px;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
 }
 
 
@@ -618,9 +618,9 @@ img a, img a:hover {
   color: #666;
   font-weight: normal;
   padding: 3px 5px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
 }
 
 .entry sup {
