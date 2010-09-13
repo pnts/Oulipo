@@ -81,6 +81,7 @@ input::-moz-focus-inner /*Remove button padding in FF*/
 
 .post {
   margin-bottom: 1.5em;
+  clear: both;
 }
 
 #supplementary {
@@ -170,9 +171,15 @@ ul#categories li, ul#archives li {
 
 dd.gallery-caption {
 	font-size: 11px;
-	color: #CCC;
+	color: #999;
 	line-height: 12px;
-	margin-top: .5em;
+	margin-top: 0;
+}
+
+.entry dt.gallery-icon img {
+  margin-bottom: .3em;
+  margin-top: .7em;
+  border: 0 !important;
 }
 
 .entry .gallery {
@@ -279,7 +286,7 @@ h5 {
 }
 
 #entry_content p {
-  margin: .7em 0 2em 0;
+  margin: 1.3em 0 1.3em 0;
 }
 
 #entry_content p.tags {
@@ -366,6 +373,9 @@ h3#comments {
   height: 20px;
 }
 
+.search-no-results .entry img {
+  margin: 0;
+}
 
 .entry.search-results {
   margin-bottom: 3em;
@@ -378,7 +388,7 @@ input {
 	border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  color: #999;
+  color: #666;
 	}
 	
 input#submit {
@@ -399,9 +409,13 @@ blockquote {
 }
 
 .entry img {
-	margin: 1.5em auto 0 auto;
+	margin: 1.5em auto;
 	display: block;
 	border: 0;
+}
+
+.entry .wp-caption img {
+  margin-bottom: 0;
 }
 
 .entry img.wp-smiley {
@@ -513,7 +527,7 @@ code {
 }
 
 .navigation {
-	font-size: .9em;
+	font-size: .7em;
 }
 
 .spacer {
@@ -595,12 +609,22 @@ h2 {
 	border-bottom: 1px solid #EEE;
 }
 
+.entry h2 {
+  border-bottom: 0;
+  font-size: 1.7em;
+}
+
 h2 a, #main_nav a {
 	color: #000;
 }
 
 h3 {
 	margin: 2em 0 0 0;
+}
+
+.entry h3 {
+  margin-top: .5em;
+  font-size: 1.4em;
 }
 
 img a, img a:hover {
@@ -790,6 +814,7 @@ ul.archive_block {
 
 ul.commentlist cite {
 	font-style: normal;
+	font-size: 1.1em;
 }
 
 ul.commentlist span.says {
@@ -798,7 +823,7 @@ ul.commentlist span.says {
 
 ul.commentlist .comment-author, ul.commentlist .comment-meta {
 	font-style: italic;
-	color: #aaa;
+	color: #333;
 }
 
 .comment-author a, .comment-meta a {
@@ -831,49 +856,126 @@ ul.commentlist .comment.bypostauthor .vcard img {
 }
 
 ul.commentlist .comment .comment-author.vcard img{
-	border: 1px solid #000;
+	border: 1px solid #CCC;
+	padding: 2px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkig-border-radius: 2px;
+}
+
+.page p.nocomments {
+  display: none;
 }
 
 /* =Comment Styles
 ------------------------------------------------------------------*/
-ul.commentlist, ul.commentmeta {
+ul.commentlist,
+ul.commentmeta {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
-
 ul.commentmeta {
 	margin-top: 2em;
 }
-
 img.avatar {
-	margin: 0 1em 0 0;
+	margin: .3em 1em 0 0;
 	float: left;
 	display: inline;
 }
-
 .commenttext {
 	margin-left: 4.4em;
 	border-bottom: 1px dotted #000;
 	padding-bottom: 1.5em;
 }
-
-#comments, #respond {
+#comments,
+#respond {
 	margin: 3em 0 0 0;
 	border: 0;
+	clear: both;
 }
-
 .moderation {
 	margin-left: 4.4em;
 }
-
 .ctitle {
 	font-variant: small-caps;
 }
-
-.reply {
-  margin-top: -1em;
+li.comment {
+	margin: 1.5em 0;
 }
+#entry-content .comment-body p {
+	margin-bottom: 1em;
+}
+div.reply {
+	margin: -8px 0 34px;
+}
+#respond .comment-notes {
+	margin-bottom: 1em;
+}
+#respond p {
+	margin: 0;
+}
+.form-allowed-tags {
+	line-height: 1em;
+}
+.children #respond {
+	margin: 0 48px 0 0;
+}
+h3#reply-title {
+	margin: 0;
+}
+#comments-list #respond {
+	margin: 0 0 18px 0;
+}
+#comments-list ul #respond {
+	margin: 0;
+}
+#respond .required {
+	color: #ff4b33;
+	font-weight: bold;
+}
+#respond input {
+	margin: 0 0 9px;
+	width: 98%;
+	padding: 4px;
+}
+#respond textarea {
+	width: 98%;
+}
+#respond .form-allowed-tags {
+	color: #888;
+	font-size: 11px;
+	line-height: 18px;
+}
+#respond .form-allowed-tags code {
+	font-size: 11px;
+}
+#respond .form-submit {
+	margin: 12px 0;
+}
+#respond .form-submit input {
+	font-size: 11px;
+	width: auto;
+}
+
+.commentlist .comment-body p {
+  margin: .7em 0 !important;
+}
+
+.commentlist #respond {
+ margin-top: -2em;
+}
+
+.commentlist #respond h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+#respond {
+  padding-top: 1em;
+  border-top: 1px solid #EEE;
+}
+
 
 /* =Better image scaling in IE
 ------------------------------------------------------------------*/
@@ -904,6 +1006,8 @@ img { -ms-interpolation-mode:bicubic; }
 	font-size: 11px;
 	margin-top: 0;
 }
+
+
 
 /* =Widget
 ------------------------------------------------------------------*/

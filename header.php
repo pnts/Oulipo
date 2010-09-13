@@ -3,22 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title><?php
-  if (is_home()) {
-    bloginfo('name');
-  } elseif (is_404()) { ?>
-    404 Not Found 
-  <?php } elseif (is_category()) { ?>
-    <?php bloginfo('name'); ?> - Category: <?php wp_title(''); ?>
-  <?php } elseif (is_search()) { ?>
-    <?php bloginfo('name'); ?> - Search Results 
-  <?php } elseif ( is_day() || is_month() || is_year() ) { ?>
-    <?php bloginfo('name'); ?> - Archives: <?php wp_title(''); ?>
-  <?php } else { ?>
-    <?php bloginfo('name'); ?> - <?php wp_title(''); ?>
-  <?php } ?>
-  </title>
+  <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>" />
+  <title><?php wp_title(); ?> <?php bloginfo('name'); ?></title>
   
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
   <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom" href="<?php bloginfo('atom_url'); ?>" />
@@ -34,7 +20,7 @@
     <link href="<?php bloginfo('template_directory'); ?>/ie6.css" type="text/css" rel="stylesheet" media="screen" />
   <![endif]-->
 
-  <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' );?> 
+  <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
   <?php wp_head(); ?>
 </head>
 
@@ -42,7 +28,7 @@
 <div id="wrapper">
   <div id="search">
     <span class="twitter"><!-- If you want to integrate Twitter, use http://rick.jinlabs.com/code/twitter/ and put the code snippet here.  --></span>
-  <?php include (TEMPLATEPATH . '/searchform.php'); ?>
+    <?php get_search_form(); ?>
 </div>
 
 <div id="main_nav">

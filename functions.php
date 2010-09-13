@@ -4,6 +4,7 @@ if ( function_exists( 'add_theme_support' )) {
   set_post_thumbnail_size( 59, 59, true );
   add_custom_background();
   add_theme_support( 'automatic-feed-links' );
+  add_editor_style();
 
   
   define('HEADER_TEXTCOLOR', '000000');
@@ -44,7 +45,7 @@ if ( function_exists( 'add_theme_support' )) {
 if ( function_exists('register_sidebar') )
     register_sidebar();
 
-$GLOBALS['content_width'] = 470;
+$content_width = 470;
 
 add_filter( 'comments_template', 'legacy_comments' );
 function legacy_comments( $file ) {
