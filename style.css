@@ -369,6 +369,8 @@ h3#comments {
   padding: 2px;
   background: url(images/search.png) no-repeat center #EEE;
   text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
   width: 25px;
   height: 20px;
 }
