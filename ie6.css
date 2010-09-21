@@ -19,3 +19,7 @@ img.avatar {
 .monthly {
 	padding-top: 1.5em;
 }
+
+#searchform input#searchsubmit {
+  font-size: 0;
+}
