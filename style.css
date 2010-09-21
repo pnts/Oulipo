@@ -127,7 +127,7 @@ ul#categories li, ul#archives li {
 	border-top: 1px dotted #999;
 }
 
-.date, .description {
+#content .date, .description {
 	margin: .1em 0 1.5em 0;
 	padding: 0;
 }
@@ -218,7 +218,7 @@ dd.gallery-caption {
 /* =Typography
 ------------------------------------------------------------------*/
 
-body, .delicious-desc, #commentform textarea {
+body, .delicious-desc, #commentform textarea, .archive #content {
 font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, sans-serif;	
 background: #FFF;
 }
@@ -233,7 +233,7 @@ h1 {
   font-variant: small-caps;
 }
 
-.description, .date {
+.description, #content .date {
   font-style: italic;
 }
 
@@ -316,7 +316,7 @@ h3#comments {
   overflow: auto;
 }
 
-.description, .date  {
+ .description, #content .date  {
   font-size: .8em;
   color: #aaa;
 }
@@ -369,7 +369,6 @@ h3#comments {
   padding: 2px;
   background: url(images/search.png) no-repeat center #EEE;
   text-indent: -9999px;
-  font-size: 0;
   line-height: 0;
   width: 25px;
   height: 20px;
