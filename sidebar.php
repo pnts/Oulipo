@@ -40,6 +40,7 @@
       <p class="edit"><?php edit_post_link('Edit', '', ''); ?></p>
     </div>
     
+    
     <?php } elseif (is_category()) { ?>
       <div class="post_nav">
         <h3>Where Am I?</h3>

@@ -2,12 +2,13 @@
 Theme Name: Oulipo
 Theme URI: http://andreamignolo.com/oulipo
 Description: A grid-based, black and white WordPress theme
-Version: 1.0.9
+Version: 1.0.9.1
 Author: A. Mignolo 
 Author URI: http://andreamignolo.com
 Tags: white, three-columns, fixed-width, threaded-comments, sticky-post
 
 License: GNU General Public License (GPL) version 3
+License URI: http://www.gnu.org/licenses/gpl.html
 
 */
 
@@ -141,7 +142,7 @@ ul#categories li, ul#archives li {
 }
 
 .entry {
-	margin: 0 0 1em 0;
+	margin: 0 0 40px 0;
 }
 
 .alignleft {
@@ -223,7 +224,7 @@ font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, sans-serif;
 background: #FFF;
 }
 
-h1, h2, h3, h4, h5, #main_nav ul, .date, .description, .ctitle, .fin,
+h1, h2, h3, h4, h5, h6, #main_nav ul, .date, .description, .ctitle, .fin,
  	.entry > p:first-child:first-line, .error, .more-link, .comment-author, .comment-meta,
  	.pagination p span, #entry_content p.tags span {
 	font-family: "Hoefler Text", "Cambria", Georgia, "Times New Roman", Times, serif;
@@ -241,15 +242,42 @@ h1 {
   font-size: 1.5em;
 }
 
-h2 {
+h2.title {
   font-size: 1.7em;
   margin-bottom: 1em;
   padding-bottom: .13em;
 }
 
-h3 {
-  font-size: 1.7em;
-  margin: 1em 0 0 0;
+.entry h1, .entry h2, .entry h3,
+.entry h4, .entry h5, .entry h6 {
+  margin-top: 10px;
+}
+
+.entry h1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-variant: normal;
+}
+
+.entry h2 {
+  font-size: 24px;
+}
+
+.entry h3 {
+  font-size: 20px;
+}
+
+.entry h4 {
+  font-size: 16px;
+  font-variant: normal;
+}
+
+.entry h5 {
+  font-size: 14px;
+}
+
+.entry h6 {
+  font-size: 13px;
 }
 
 #supplementary h3, h2.widgettitle {
@@ -263,16 +291,6 @@ h3 {
   border-bottom: 0;
 }
 
-h4 {
-  font-size: 1.4em;
-  margin: 2em 0 0 0;
-  font-variant: small-caps;
-}
-
-h5 {
-  font-size: 1.3em;
-  margin: .8em 0;
-}
 
 #main_nav ul {
   text-transform: uppercase;
@@ -286,7 +304,7 @@ h5 {
 }
 
 #entry_content p {
-  margin: 1.3em 0 1.3em 0;
+  margin: 10px 0 10px 0;
 }
 
 #entry_content p.tags {
@@ -336,11 +354,6 @@ h3#comments {
 .entry > p:first-child:first-line {
   font-variant: small-caps;
   font-size: 1.3em;
-}
-
-.entry ul, .entry ol {
-  margin: -1em 0 1.5em 0;
-  padding-left: 2.2em;
 }
 
 #search {
@@ -538,7 +551,7 @@ code {
 }
 
 #entry_content .pagination p {
-  margin: -1em 0 2em 0;
+  margin: 0 0 15px 0;
 }
 
 #entry_content .pagination p span,
@@ -560,6 +573,35 @@ code {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+}
+
+.entry table {
+  width: 100%;
+}
+
+.entry table tr th {
+  text-align: left;
+  background: #EEE;
+  padding-left: 5px;
+}
+
+.entry table tr td {
+  padding-left: 5px;
+  border-bottom: 1px solid #EEE;
+}
+
+.entry pre {
+  padding: 10px;
+  background: #EEE;
+  font-size: 12px;
+}
+
+.entry ul, .entry ol {
+  margin-top: 10px;
+}
+
+.entry ul ul, .entry ol ol{
+  padding-left: 20px;
 }
 
 
@@ -606,26 +648,12 @@ a:hover, a:hover span {
 	border-right: none;
 }
 
-h2 {
+h2.title {
 	border-bottom: 1px solid #EEE;
-}
-
-.entry h2 {
-  border-bottom: 0;
-  font-size: 1.7em;
 }
 
 h2 a, #main_nav a {
 	color: #000;
-}
-
-h3 {
-	margin: 2em 0 0 0;
-}
-
-.entry h3 {
-  margin-top: .5em;
-  font-size: 1.4em;
 }
 
 img a, img a:hover {
