@@ -6,7 +6,7 @@
   <?php while (have_posts()) : the_post(); ?>
     <?php if(is_home()) { if ( function_exists('wp_list_comments') ) { ?> <div <?php post_class(); ?>> <?php }} ?>
       <h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-      <p class="date"><?php the_time('F jS, Y') ?> <?php comments_popup_link('<span class="commentcount">&sect; 0</span>', '<span class="commentcount">&sect; 1</span>', '<span class="commentcount">&sect; %</span>'); ?></p>
+      <p class="date"><?php the_time('F jS, Y') ?> &sect; <?php comments_popup_link('<span class="commentcount">0 comments</span>', '<span class="commentcount">1 comment</span>', '<span class="commentcount"> % comments</span>'); ?> &sect; <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">permalink</a></p>
       
       <?php if(is_search()) : ?>
         <div class="entry search-results">

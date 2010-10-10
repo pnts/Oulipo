@@ -40,6 +40,12 @@
       <p class="edit"><?php edit_post_link('Edit', '', ''); ?></p>
     </div>
     
+    <ul>
+      <?php if ( !function_exists('dynamic_sidebar')
+        || !dynamic_sidebar() ) : ?>
+       <?php endif; ?>
+    </ul>
+    
     
     <?php } elseif (is_category()) { ?>
       <div class="post_nav">
@@ -49,6 +55,12 @@
           <div class="spacer"></div>
       </div>
       
+      <ul>
+        <?php if ( !function_exists('dynamic_sidebar')
+          || !dynamic_sidebar() ) : ?>
+         <?php endif; ?>
+      </ul>
+      
     <?php } elseif (is_tag()) { ?>
       <div class="post_nav">
         <h3>Where Am I?</h3>
@@ -56,6 +68,12 @@
           <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?>.</p>
           <div class="spacer"></div>
       </div>
+      
+      <ul>
+        <?php if ( !function_exists('dynamic_sidebar')
+          || !dynamic_sidebar() ) : ?>
+         <?php endif; ?>
+      </ul>
     
     <?php } elseif (is_month()) { ?>
       <div class="post_nav">
@@ -63,6 +81,12 @@
         <p>You are currently viewing the archives for <strong><?php the_time('F, Y'); ?></strong> at <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>.</p>
         <div class="spacer"></div>
       </div>
+      
+      <ul>
+        <?php if ( !function_exists('dynamic_sidebar')
+          || !dynamic_sidebar() ) : ?>
+         <?php endif; ?>
+      </ul>
 
     <?php } elseif (is_year ()) { ?>
       <div class="post_nav">
@@ -70,6 +94,12 @@
         <p>You are currently viewing the archives for <strong><?php the_time('Y'); ?></strong> at <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>.</p>
         <div class="spacer"></div>
       </div>
+      
+      <ul>
+        <?php if ( !function_exists('dynamic_sidebar')
+          || !dynamic_sidebar() ) : ?>
+         <?php endif; ?>
+      </ul>
 
     <?php } elseif (is_day()) { ?>
       <div class="post_nav">
@@ -77,6 +107,12 @@
         <p>You are currently viewing the archives for <strong><?php the_time('l, F jS, Y'); ?></strong> at <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>.</p>
         <div class="spacer"></div>
       </div>
+      
+      <ul>
+        <?php if ( !function_exists('dynamic_sidebar')
+          || !dynamic_sidebar() ) : ?>
+         <?php endif; ?>
+      </ul>
 
     <?php } elseif (is_search()) {?>
       <div class="post_nav">
@@ -84,6 +120,12 @@
         <p>You are currently viewing the search results for <strong><?php the_search_query(); ?></strong>.</p>
         <div class="spacer"></div>
       </div>
+      
+      <ul>
+        <?php if ( !function_exists('dynamic_sidebar')
+          || !dynamic_sidebar() ) : ?>
+         <?php endif; ?>
+      </ul>
 
     <?php } elseif (is_page('about')) {?>
       <div class="post_nav">
@@ -92,6 +134,12 @@
           <?php wp_list_bookmarks('categorize=0&title_li=0&title_after=&title_before=');?>
         </ul>
       </div>
+      
+      <ul>
+        <?php if ( !function_exists('dynamic_sidebar')
+          || !dynamic_sidebar() ) : ?>
+         <?php endif; ?>
+      </ul>
 
 <?php } elseif (is_page('contact')) {?>
 <?php } ?>

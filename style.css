@@ -219,7 +219,7 @@ dd.gallery-caption {
 /* =Typography
 ------------------------------------------------------------------*/
 
-body, .delicious-desc, #commentform textarea, .archive #content {
+body, .delicious-desc, #commentform textarea, .archive #content, #footer {
 font-family: "Lucida Grande", "Lucida Sans Unicode", verdana, sans-serif;	
 background: #FFF;
 }
@@ -246,6 +246,7 @@ h2.title {
   font-size: 1.7em;
   margin-bottom: 1em;
   padding-bottom: .13em;
+  border-bottom: 1px solid #EEE;
 }
 
 .entry h1, .entry h2, .entry h3,
@@ -281,8 +282,8 @@ h2.title {
 }
 
 #supplementary h3, h2.widgettitle {
-  margin: 2em 0 -.7em 0;
-  font-size: 1.15em;
+  margin: 2em 0 -10px 0;
+  font-size: 14px;
   font-variant: small-caps;
   border-bottom: none;
 }
@@ -336,12 +337,13 @@ h3#comments {
 
  .description, #content .date  {
   font-size: .8em;
-  color: #aaa;
+  color: #666;
 }
 
 .commentcount {
-  color: #aaa ;
+  color: #666;
 }
+
 
 #entry_content .date {
   margin: -1.8em 0 1.3em 0;
@@ -461,8 +463,16 @@ blockquote {
 	list-style-type: none;
 }
 
-#supplementary ul li ul li {
-	border-bottom: 1px dotted #EEE;
+#supplementary ul ul ul {
+  margin-left: 10px;
+}
+
+#supplementary .meta ul.children {
+  margin-top: 0;
+}
+
+#supplementary .meta ul li ul {
+  margin-top: 10px;
 }
 
 #supplementary p {
@@ -532,7 +542,6 @@ li.footnote {
 }
 
 .post_nav {
-	position: fixed;
 	width: 15.5em;
 }
 
@@ -556,7 +565,7 @@ code {
 
 #entry_content .pagination p span,
 #entry_content p.tags span {
-  color: #AAA;
+  color: #666;
   font-style: italic;
   font-size: 1.1em;
 }
@@ -648,10 +657,6 @@ a:hover, a:hover span {
 	border-right: none;
 }
 
-h2.title {
-	border-bottom: 1px solid #EEE;
-}
-
 h2 a, #main_nav a {
 	color: #000;
 }
@@ -692,6 +697,10 @@ img a, img a:hover {
 	border-bottom: 0;
 }
 
+#supplementary ul.single_post_meta a {
+  display: inline;
+}
+
 #main_nav li {
 	border-bottom: 1px solid #EEE;
 }
@@ -727,13 +736,13 @@ img a, img a:hover {
 }
 
 .entry a.more-link {
-	color: #AAA;
+	color: #666;
 	font-style: italic;
-	font-size: 1.1em;
+	font-size: 14px;
 	border: 0;
 	text-align: center;
 	display: block;
-	margin: -1em auto 0 auto;
+	margin: 0 auto 0 auto;
 	text-transform: none;
 	font-weight: normal;
 	clear: both;

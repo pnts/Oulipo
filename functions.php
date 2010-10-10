@@ -21,7 +21,7 @@ if ( function_exists( 'add_theme_support' )) {
                   margin-bottom: 30px;
                  }
         #main_nav h1.masthead a { color:#<?php header_textcolor();?>; }
-    </style> <?php }
+    </style><?php }
     
   function oulipo_admin_header_style() { ?>
     <style type="text/css">
