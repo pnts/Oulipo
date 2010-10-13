@@ -32,7 +32,7 @@ if ( function_exists( 'add_theme_support' )) {
     function oulipo_admin_header_image() { ?>
        <div id="headimg">
          <style type="text/css">
-            h1.masthead, p.description { font-family: "Hoefler Text","Cambria",Georgia,"Times New Roman",Times,serif; }
+            h1.masthead, p.description { font-family: "Hoefler Text","Cambria",Georgia,"Times New Roman",Times,serif; width: 160px; }
             p.description { color: #666666; font-size: 13px; }
             h1.masthead a { font-size: 24px; font-weight: normal; font-variant: small-caps; text-decoration: none; }
             h1.masthead { margin: 30px 0 0 0;}
