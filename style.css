@@ -331,7 +331,7 @@ h3#comments {
   padding: 4px;
   width: 43.5em;
   font-size: .9em;
-  color: #999;
+  color: #333;
   overflow: auto;
 }
 
@@ -644,7 +644,8 @@ a:hover, a:hover span {
 }
 
 .entry sup a,
-#main_nav .current_page_item a
+#main_nav .current_page_item a,
+#main_nav .current_page_ancestor a
 {
   color: #3399FF !important;
 }
@@ -874,6 +875,10 @@ ul.commentlist .comment-meta {
 	margin-top: -.5em;
 }
 
+.entry ul.commentlist .comment.bypostauthor .vcard img {
+	border: 1px solid #3399FF;
+}
+
 .commentlist ul.children {
 	list-style-type: none;
 	overflow: hidden;
@@ -887,10 +892,6 @@ h3#comments {
 
 ul.commentlist .navigation {
 	border: 0;
-}
-
-ul.commentlist .comment.bypostauthor .vcard img {
-	border: 1px solid #FF9900;
 }
 
 ul.commentlist .comment .comment-author.vcard img{
