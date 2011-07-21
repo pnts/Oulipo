@@ -940,6 +940,10 @@ img.avatar {
 li.comment {
 	margin: 1.5em 0;
 }
+li.comment.bypostauthor{
+        border-left: 3px solid #3399FF;
+        background-color:#EEE
+}
 #entry-content .comment-body p {
 	margin-bottom: 1em;
 }
